@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import CollectionsOverview from '../../components/collectiom-overview/collection-overview';
 import { Route } from 'react-router-dom';
 import CollectionPage from '../collection/collection.component';
@@ -15,18 +15,15 @@ const CollectionsOverviewWithSppiner=WithSppiner(CollectionsOverview);
 const CollectionPageWithSppiner=WithSppiner(CollectionPage);
 
 
-class ShopPage extends React.Component {
+const ShopPage=({fetchCollectionsStartAsync,match,IsCollectionFetching,IsCollectionsLoaded})=> {
  
   
-  componentDidMount() {
-    const { fetchCollectionsStartAsync } = this.props;
+  useEffect(()=> {
     fetchCollectionsStartAsync();
     
-  }
+  },[fetchCollectionsStartAsync]);
 
-  render() {
-    const { match } = this.props;
-    const {IsCollectionFetching,IsCollectionsLoaded}=this.props;
+
     return (
       <div className='shop-page'>
         <Route exact path={`${match.path}`} render={(props)=><CollectionsOverviewWithSppiner isLoading={IsCollectionFetching}  {...props}/>} />
@@ -37,15 +34,15 @@ class ShopPage extends React.Component {
       </div>
     );
   }
-}
 
-const mapStateTOProps=createStructuredSelector({
-  IsCollectionFetching:selectIsCollectionFetching,
-  IsCollectionsLoaded:selectIsCollectionsLoaded
-})
+  const mapStateTOProps=createStructuredSelector({
+    IsCollectionFetching:selectIsCollectionFetching,
+    IsCollectionsLoaded:selectIsCollectionsLoaded
+  })
+  
+  const mapDispatchToProps = (dispatch) => ({
+    fetchCollectionsStartAsync:()=>dispatch(fetchCollectionsStartAsync())
+  });
 
-const mapDispatchToProps = (dispatch) => ({
-  fetchCollectionsStartAsync:()=>dispatch(fetchCollectionsStartAsync())
-});
 
 export default connect(mapStateTOProps, mapDispatchToProps)(ShopPage);
