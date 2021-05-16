@@ -10,7 +10,18 @@ export const HeaderContainer=styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-
+  @media screen and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
+        width:100vw;
+        position: fixed;
+        height: 60px;
+        padding: 10px;
+        background-color: white;
+        margin-bottom: 20px;
+        top: 0px;
+        z-index:10;
+  }
+  }
 `;
 
 export const LogoContainer=styled(Link)`
@@ -18,6 +29,11 @@ export const LogoContainer=styled(Link)`
     height: 100%;
     width: 70px;
     padding: 25px;
+    @media screen and (max-width: 800px) {
+    width:50px;
+    padding:0px;
+    
+  }
 
 `;
 export const OptionsContainer=styled.div`
@@ -27,7 +43,10 @@ export const OptionsContainer=styled.div`
     align-items: center;
     justify-content: flex-end;
 
-
+    @media screen and (max-width: 800px) {
+        width:80%;
+       
+  }
 
 `;
 export const OptionsLink=styled(Link)`
