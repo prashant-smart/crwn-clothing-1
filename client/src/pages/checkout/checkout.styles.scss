@@ -20,6 +20,7 @@
         &:last-child {
           width: 8%;
         }
+        
       }
     }
   
@@ -40,6 +41,15 @@
     }
   @media screen and (max-width: 800px) {
      width:91%;
-       }
+     
   }
-  
+  }
+  @media screen and (max-width: 800px){
+  span{
+    font-size: smaller;
+   }
+   .checkout-page .checkout-header .header-block:last-child{
+    width: 16%;
+    margin: 0px -17px;
+   }
+  }

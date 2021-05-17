@@ -20,6 +20,7 @@
     .quantity,
     .price {
       width: 23%;
+      font-size: medium;
     }
   
     .quantity {
@@ -47,7 +48,13 @@
     .name,
     .quantity,
     .price {
-     font-size: 18px!important;
+      font-size: 12px;
+    }
+    .checkout-page .total{
+      font-size: 20px;
+    }
+    .checkout-page .test-warning{
+      font-size: 18px;
     }
     
      }

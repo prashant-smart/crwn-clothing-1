@@ -13,7 +13,13 @@
     
   }
   @media screen and (max-width: 800px) {
-    margin-top: 2rem;
-    align-self: center;
-     }
+    margin-top: 3rem;
+    // align-self: center;
+    width:auto;
+  }
+}
+@media screen and (max-width: 800px){
+  form{
+    width: 93vw;
+  }
 }

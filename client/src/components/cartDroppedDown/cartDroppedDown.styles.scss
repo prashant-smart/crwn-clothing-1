@@ -25,5 +25,10 @@
     button {
       margin-top: auto;
     }
+
+    @media screen and (max-width: 800px){
+    width: 221px;
+    height: 340px;
+  }
   }
   

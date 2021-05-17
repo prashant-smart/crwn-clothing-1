@@ -6,7 +6,7 @@ import{connect} from 'react-redux'
 import {selectIsCollectionFetching,selectIsCollectionsLoaded } from '../../redux/shop/shop.selector.js';
 import {fetchCollectionsStartAsync} from '../../redux/shop/shop.action';
 import {createStructuredSelector} from 'reselect'
-
+import Footer from '../../components/footer/fotter.component'
 
 import WithSppiner from '../../components/with-spinner/with-spinner.component'
 
@@ -31,6 +31,7 @@ const ShopPage=({fetchCollectionsStartAsync,match,IsCollectionFetching,IsCollect
           path={`${match.path}/:collectionId`}
           render={(props)=><CollectionPageWithSppiner isLoading={!IsCollectionsLoaded} {...props}/>}
         />
+        <Footer/>
       </div>
     );
   }

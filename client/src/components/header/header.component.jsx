@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 
 import CartDroppedDown from '../cartDroppedDown/cartDroppedDown'
 
+import {Link} from 'react-scroll'
+
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
 import {HeaderContainer,LogoContainer,OptionsLink,OptionsContainer  } from './header.styles.js';
@@ -28,9 +30,9 @@ const Header = ({ currentUser }) => (
       <OptionsLink to='/shop'>
         SHOP
       </OptionsLink>
-      <OptionsLink  to='/shop'>
+      <Link  to='Footer-Container' smooth={true} duration={1000}>
         CONTACT
-      </OptionsLink>
+      </Link>
       {currentUser ? (
         <OptionsLink as='div' onClick={() => auth.signOut()}>
           SIGN OUT

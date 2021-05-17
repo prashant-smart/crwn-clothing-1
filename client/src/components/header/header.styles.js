@@ -1,10 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import {Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-
-
-export const HeaderContainer=styled.div`
+export const HeaderContainer = styled.div`
   height: 70px;
   width: 100%;
   display: flex;
@@ -12,45 +10,42 @@ export const HeaderContainer=styled.div`
   margin-bottom: 25px;
   @media screen and (max-width: 800px) {
     @media screen and (max-width: 800px) {
-        width:100vw;
-        position: fixed;
-        height: 60px;
-        padding: 10px;
-        background-color: white;
-        margin-bottom: 20px;
-        top: 0px;
-        z-index:10;
-  }
+      width: 100vw;
+      position: fixed;
+      height: 60px;
+      padding: 10px;
+      background-color: white;
+      margin-bottom: 20px;
+      top: 0px;
+      z-index: 10;
+    }
   }
 `;
 
-export const LogoContainer=styled(Link)`
-
-    height: 100%;
-    width: 70px;
-    padding: 25px;
-    @media screen and (max-width: 800px) {
-    width:50px;
-    padding:0px;
-    
+export const LogoContainer = styled(Link)`
+  height: 100%;
+  width: 70px;
+  padding: 25px;
+  @media screen and (max-width: 800px) {
+    width: 50px;
+    padding: 0px;
   }
-
 `;
-export const OptionsContainer=styled.div`
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+export const OptionsContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-    @media screen and (max-width: 800px) {
-        width:80%;
-       
+  @media screen and (max-width: 800px) {
+    width: 80%;
   }
-
 `;
-export const OptionsLink=styled(Link)`
-
-    padding: 10px 15px;
-    cursor: pointer;
+export const OptionsLink = styled(Link)`
+  padding: 10px 15px;
+  cursor: pointer;
+  @media screen and (max-width: 800px) {
+    padding: 0px 10px;
+  }
 `;
